@@ -12,7 +12,7 @@ function App() {
 
       <Introduction/>
 
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="/">
         <Switch>
           
           
