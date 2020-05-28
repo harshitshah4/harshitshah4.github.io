@@ -11,7 +11,7 @@ class CaseStudy extends React.Component{
         return(
             <div style={{width:"100%",height:"100vh",minHeight:"100vh",maxHeight:"100vh"}}>
                 <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",flexDirection:"row",backgroundColor:"#0EED4A",color:"white",height:"10%",minHeight:"10%",maxHeight:"10%",overflow:"auto"}}>
-                    <Link to="/" style={{alignSelf:"center"}}><i style={{color:"white"}} class="fas fa-times"></i></Link>
+                    <Link to="/" style={{alignSelf:"center",margin:"1%"}}><i style={{color:"white"}} class="fas fa-times"></i></Link>
                     
                     <p style={{textAlign:"center",fontWeight:"bold",fontSize:"medium"}}>{this.props.title}</p>
                     

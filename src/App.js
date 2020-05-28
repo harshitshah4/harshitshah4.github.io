@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './pages/Home';
 
-import {BrowserRouter as Router , Route, Switch } from 'react-router-dom';
+import {HashRouter as Router , Route, Switch } from 'react-router-dom';
 import Introduction from './components/Introduction';
 import CaseStudy from './components/CaseStudy';
 
