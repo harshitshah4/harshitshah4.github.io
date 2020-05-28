@@ -15,6 +15,13 @@ function App() {
       <Router basename="/">
         <Switch>
           
+        <Route exact path="/" >
+            <div style={{backgroundColor:"#F5F5F5"}}>
+              <Home />
+            </div>
+            
+          </Route>
+
           
           {/* <Route exact path="/project/JainSaraswati">
             <CaseStudy title="Jain Saraswati" link="../public/"/>
@@ -32,13 +39,7 @@ function App() {
             </div>
           </Route>
 
-          <Route path="/" >
-            <div style={{backgroundColor:"#F5F5F5"}}>
-              <Home />
-            </div>
-            
-          </Route>
-
+          
         </Switch>
       </Router>
     </div>
