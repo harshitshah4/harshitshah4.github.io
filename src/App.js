@@ -33,6 +33,12 @@ function App() {
             </div>
           </Route>
 
+          <Route exact path="/project/TwitterSentimentAnalysis">
+            <div>
+              <CaseStudy title="Twitter Sentiment Analysis" link={"/twittersentimentanalysis.html"}/>
+            </div>
+          </Route>
+
           <Route path="/" >
             <div style={{backgroundColor:"#F5F5F5"}}>
               <Home />
