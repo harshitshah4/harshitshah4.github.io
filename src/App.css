@@ -3,6 +3,8 @@
   grid-template-columns:1fr 3fr;
   width:100vw;
   height:100vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
 }
 
 
