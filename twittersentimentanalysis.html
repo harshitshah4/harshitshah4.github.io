@@ -1,72 +1,44 @@
-<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Sentiment Analysis of Twitter Hashtags and Visualize them on scale using Big Data , AI and Cloud…</title><style>
-    * {
-      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    }
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-    h1 {
-      font-size: 50px;
-      margin-bottom: 17px;
-      color: #333;
-    }
-    h2 {
-      font-size: 24px;
-      line-height: 1.6;
-      margin: 30px 0 0 0;
-      margin-bottom: 18px;
-      margin-top: 33px;
-      color: #333;
-    }
-    h3 {
-      font-size: 30px;
-      margin: 10px 0 20px 0;
-      color: #333;
-    }
-    header {
-      width: 640px;
-      margin: auto;
-    }
-    section {
-      width: 640px;
-      margin: auto;
-    }
-    section p {
-      margin-bottom: 27px;
-      font-size: 20px;
-      line-height: 1.6;
-      color: #333;
-    }
-    section img {
-      max-width: 640px;
-    }
-    footer {
-      padding: 0 20px;
-      margin: 50px 0;
-      text-align: center;
-      font-size: 12px;
-    }
-    .aspectRatioPlaceholder {
-      max-width: auto !important;
-      max-height: auto !important;
-    }
-    .aspectRatioPlaceholder-fill {
-      padding-bottom: 0 !important;
-    }
-    header,
-    section[data-field=subtitle],
-    section[data-field=description] {
-      display: none;
-    }
-    </style></head><body><article class="h-entry">
-<header>
-<h1 class="p-name">Sentiment Analysis of Twitter Hashtags and Visualize them on scale using Big Data , AI and Cloud…</h1>
-</header>
-<section data-field="subtitle" class="p-summary">
-Twitter generates a lot of data , as much as an average of 6000 tweets per second , and these tweets hold valuable information too . The…
-</section>
-<section data-field="body" class="e-content">
-<section name="2e96" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="dc8b" id="dc8b" class="graf graf--h3 graf--leading graf--title"><strong class="markup--strong markup--h3-strong">Sentiment Analysis of Twitter Hashtags and Visualize them on scale using Big Data , AI and Cloud Computing</strong></h3><p name="9b95" id="9b95" class="graf graf--p graf-after--h3">Twitter generates a lot of data , as much as an average of 6000 tweets per second , and these tweets hold valuable information too . The aim of this project is to aggregate the valuable information from raw data , convert it into structured data and then , visualize it .</p><p name="6f71" id="6f71" class="graf graf--p graf-after--p">In this project , we constantly analyze the tweets received from Twitter, We then search for all the hashtags within the tweet , We then call our AI model which will classify the tweet into several emotions (Joy, Angry , Confident , Fear , etc). Then we will group all the tweets based on hashtags , While grouping we also calculate the percentage of tweets for each emotion , and then send it to the database for further query and retrieval for Visualization by front end. In between we do several other processes such as sorting of tweets based on whether the user that tweeted that tweet is verified or not. This will be the “priority order” of tweets within our app.The most important part is this all happens in <strong class="markup--strong markup--p-strong">real-time. </strong>The technical details are explained later in this post.</p><p name="304f" id="304f" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Example Of Use Case ;</strong></p><p name="635c" id="635c" class="graf graf--p graf-after--p">Suppose that you are Prime Minister of India , and you just launched #SwachhBharatAbhiyan , now you may want to know the response / emotion of people regarding this . The common way to this , is to go to Twitter , Look for #SwachhBharatAbhiyan , and read all the tweets , and try to figure out the general emotion of users from those tweets. But even doing so won’t get you enough information.</p><p name="c250" id="c250" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">So , How can we solve this ?</strong></p><p name="4975" id="4975" class="graf graf--p graf-after--p">In our project , the user navigates to our very simple website (With very complex backend architecture ) and then be able to search for a particular hashtag , or select one from trending hashtags , after selecting hashtag , a page will be opened , where a Line Chart will be shown , representing the different emotions , and theirs , variation with time . Below Line Chart , Different cards will be shown representing , “Total Tweet Counts” , “Total Joy Count”, “Total Confident Count “ , etc . Below that another Radar Chart is shown , Displaying percentage of different emotions. (i.e. The emotion with more percentage will cover more areas of the graph).</p><p name="61b3" id="61b3" class="graf graf--p graf-after--p">And below all , the Actual List of Tweets will be shown sorted by priority order. As a bonus , users may also be able to filter through different durations of time.</p><p name="42d9" id="42d9" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Technical Details :</strong></p><p name="0478" id="0478" class="graf graf--p graf-after--p">As said earlier, Twitter generates at average 6000 tweets per second , approx. Now analyzing , classifying , grouping , aggregating , sorting, storing , so many tweets in such a small time , is well , very difficult , and doing all this in real time makes it even more difficult .</p><figure name="281e" id="281e" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 467px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 66.60000000000001%;"></div><img class="graf-image" data-image-id="0*LRi-LglxJ2j6Xwb-" data-width="1400" data-height="933" src="./TwitterSentimentArchitecture.png"></div></figure><p name="1557" id="1557" class="graf graf--p graf-after--figure">The above is a high-level architecture diagram , in detail some of the components will be hosted in the cloud in separate clusters .</p><p name="1e87" id="1e87" class="graf graf--p graf-after--p">Now , to do this we will be using a Big Data tool named as <strong class="markup--strong markup--p-strong">Apache Spark </strong>, The Apache Spark is able to give approx 100 ms Latency , more explanation for Apache Spark could be found on their official website.</p><p name="fda5" id="fda5" class="graf graf--p graf-after--p">There are other younger libraries that perform Streaming more efficiently than Spark , but we chose Spark because of its maturity and good community.</p><p name="58d5" id="58d5" class="graf graf--p graf-after--p">Apache Spark will be separately deployed as a cluster in the cloud , maybe using some cluster manager such as YARN , Mesos or Kubernetes.</p><p name="ecef" id="ecef" class="graf graf--p graf-after--p">We will be using <strong class="markup--strong markup--p-strong">AWS S3</strong> to checkpoint the data from Spark , (Concept of checkpointing could also be referenced from Apache Spark’s website).</p><p name="ffb2" id="ffb2" class="graf graf--p graf-after--p">The reason to select AWS S3 is that it is a pretty scalable and reliable object store in the cloud.</p><p name="b9f2" id="b9f2" class="graf graf--p graf-after--p">Our AI model is Watson Tone Analyzer provided by IBM , as it provides a set of APIs for analyzing we won’t have to separately host our AI model and scale it.</p><p name="1804" id="1804" class="graf graf--p graf-after--p">To store the processed data from Apache Spark , <strong class="markup--strong markup--p-strong">MongoDB </strong>will be used.</p><p name="35f4" id="35f4" class="graf graf--p graf-after--p">The reason to select MongoDB is its flexibility and NoSQL in nature.</p><p name="a072" id="a072" class="graf graf--p graf-after--p">Other stacks include as follows :</p><p name="6f97" id="6f97" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">React</strong> : For Frontend , (Data Visualization , Query , Client interface)</p><p name="f902" id="f902" class="graf graf--p graf-after--p"><strong class="markup--strong markup--p-strong">Node js</strong> : For Backed Server (Frontent will talk to Backed ,for querying data, Backend will talk to MongoDB database).</p><p name="c197" id="c197" class="graf graf--p graf-after--p">Github:</p><p name="71df" id="71df" class="graf graf--p graf-after--p"><a href="https://github.com/harshitshah4/TwitterSentimentAnalysisServer" data-href="https://github.com/harshitshah4/TwitterSentimentAnalysisServer" class="markup--anchor markup--p-anchor" rel="noopener" target="_blank">harshitshah4/TwitterSentimentAnalysisServer</a></p><p name="83e1" id="83e1" class="graf graf--p graf--empty graf-after--p graf--trailing"><br></p></div></div></section>
-</section>
-<footer><p><a href="https://medium.com/p/13bcc7ac968b">View original.</a></p><p>Exported from <a href="https://medium.com">Medium</a> on September 2, 2020.</p></footer></article></body></html>
+
+<style>
+  p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+  }
+</style>
+<h2><strong>Sentiment Analysis of Twitter Hashtags and Visualize them on scale using Big Data , AI and Cloud Computing</strong></h1>
+<hr />
+<p>Twitter generates a lot of data , as much as an average of 6000 tweets per second , and these tweets hold valuable information too . The aim of this project is to aggregate the valuable information from raw data , convert it into structured data and then , visualize it .</p>
+<p>&nbsp;</p>
+<p>In this project , we constantly analyze the tweets received from Twitter, We then search for all the hashtags within the tweet , We then call our AI model which will classify the tweet into several emotions (Joy, Angry , Confident , Fear , etc). Then we will group all the tweets based on hashtags , &nbsp;While grouping we also calculate the percentage of tweets for each emotion , and then send it to the database for further query and retrieval for Visualization by frontend. In between we do several other processes such as sorting of tweets based on whether the user that tweeted that tweet is verified or not. This will be the "priority order" of tweets within our app.The most important part is this all happens in real-time. The technical details are explained later in this post.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>Example Of Use Case ;</p>
+<p>Suppose that you are Prime Minister of India , and you just launched #SwachhBharatAbhiyan , now you may want to know the response / emotion of people regarding this . The common way to this , is to go to Twitter , Look for #SwachhBharatAbhiyan , and read all the tweets , and try to figure out the general emotion of users from those tweets. But even doing so won't get you enough information.</p>
+</blockquote>
+<p>&nbsp;</p>
+<p>So , How can we solve this ?</p>
+<p>In our project , the user navigates to our very simple website (With very complex backend architecture ) and then be able to search for a particular hashtag , or select one from trending hashtags , after selecting hashtag , a page will be opened , where a Line Chart will be shown , representing the different emotions , and theirs , variation with time . Below Line Chart &nbsp;, Different cards will be shown representing , "Total Tweet Counts" , "Total Joy Count", "Total Confident Count " , etc . Below that another Radar Chart is shown , Displaying percentage of different emotions. (i.e. The emotion with more percentage will cover more areas of the graph).</p>
+<p>And below all , the Actual List of Tweets will be shown sorted by priority order. As a bonus , users may also be able to filter through different durations of time.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Technical Details :</p>
+<p>&nbsp;</p>
+<p>As said earlier, &nbsp;Twitter generates at average 6000 tweets per second , approx. Now analyzing , classifying , grouping , aggregating , sorting, storing , so many tweets in such a small time , is well , very difficult , and doing all this in real time makes it even more difficult .</p>
+<p><img src="./TwitterSentimentArchitecture.png" alt="Architecture diagram Twitter Sentiment Analysis" style="width:100%;height:auto;max-width:100%"/></p>
+<p>The above is a high-level architecture diagram , in detail some of the components will be hosted in the cloud in separate clusters .</p>
+<p>Now , to do this we will be using a Big Data tool named as Apache Spark &nbsp;, The Apache Spark is able to give approx 100 ms Latency , more explanation for Apache Spark could be found on their official website.</p>
+<p>There are other younger libraries that perform Streaming more efficiently than Spark , but we chose Spark because of its maturity and good community.</p>
+<p>Apache Spark will be separately deployed as a cluster in the cloud , maybe using some cluster manager such as YARN , Mesos or Kubernetes.</p>
+<p>&nbsp;We will be using AWS S3 to checkpoint the data from Spark , (Concept of checkpointing could also be referenced from Apache Spark's website).</p>
+<p>&nbsp;The reason to select AWS S3 is that it is a pretty scalable and reliable object store in the cloud.</p>
+<p>&nbsp;Our AI model is Watson Tone Analyzer provided by IBM , as it provides a set of APIs for analyzing we won&rsquo;t have to separately host our AI model and scale it.</p>
+<p>&nbsp;To store the processed data from Apache Spark , MongoDB will be used.</p>
+<p>&nbsp;The reason to select MongoDB is its flexibility and NoSQl in nature.</p>
+<p>&nbsp;</p>
+<p>Other stacks include as follows :</p>
+<p>React : For Frontend &nbsp;, (Data Visualization , Query , Client interface)</p>
+<p>Node js : For Backend Server (Frontend will talk to Backend ,for querying data, Backend will talk to MongoDB database).</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Github:</p>
+<p><a href="harshitshah4/TwitterSentimentAnalysisServer">harshitshah4/TwitterSentimentAnalysisServer</a></p>
