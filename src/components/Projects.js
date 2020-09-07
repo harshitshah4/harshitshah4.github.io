@@ -3,10 +3,18 @@ import { Link } from 'react-router-dom';
 
 import "./styles/Project.css"
 
+
+function ProjectCardWrapper(props){
+    return(
+    (props.action.external)?<a href={props.action.link} target="_blank" className={props.className} style={props.style}>{props.children}</a>:<Link to={props.action.link} className={props.className} style={props.style}>{props.children}</Link>
+    )
+}
+
 function Project(props){
 
     return (
-        <div className="project-card" style={{display:"flex",flexDirection:"column",height:"98%",margin:"2%",padding:"2%",backgroundColor:"white"}}>
+
+        <ProjectCardWrapper action={props.action} className="project-card" style={{display:"flex",flexDirection:"column",height:"98%",margin:"2%",padding:"2%",backgroundColor:"white"}}>
             <h3 style={{textAlign:"center"}}>{props.title}</h3>
             <div style={{display:"flex",minHeight:"10%",maxHeight:"10%",flexWrap:"wrap",justifyContent:"space-between",overflowY:"auto"}}>
                 {
@@ -31,7 +39,7 @@ function Project(props){
                 </Link>
                 }
   
-        </div>
+        </ProjectCardWrapper>
 
     )
 
